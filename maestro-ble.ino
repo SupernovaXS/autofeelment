@@ -135,6 +135,10 @@ class MyCallbacks: public BLECharacteristicCallbacks {
 void setup() {
   Serial.begin(115200);
 
+  maestroSerial.begin(115200);
+  maestro.goHome();
+  Serial.println("Home");
+
   pinMode(LED, OUTPUT);
 
   // Create the BLE Device
